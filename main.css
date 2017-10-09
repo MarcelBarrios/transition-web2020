@@ -1,0 +1,68 @@
+/*homework: 1. Hauduken has to exit the screen after x amount of time passed Exiting by the right.
+             THEN  It has to enter again by the left
+            2. Add another thing to the background(clouds), so It seems 3d.
+            3. Complete the sign in sign out css flexbox.
+            4. Study for the the exam(flex)
+            5. (Optional) Start Firebase. Day 4
+            6.   */
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url("mario-underground-end11.png");
+  background-repeat: repeat-x;
+  background-size: 1150px auto;
+  animation: 10s linear 0s normal none infinite mario;
+
+}
+
+@keyframes mario {
+  from {background-position: 0 0px;}
+  to {background-position: -1150px 0;}
+}
+
+.Hauduken {
+  /* use the timing function steps() to chunk the animation into 12 equal pieces */
+  background: url(https://davidwalsh.name/demo/ken.png) 0 0 no-repeat;
+  animation: fighting 1s steps(4) 1,
+             fighting2 1s steps(7) infinite 1s;
+  height: 80px;
+  width: 70px;
+  margin: 550px 800px auto;
+  position: fixed;
+  animation-direction: normal;
+
+}
+
+
+/* Don't forget: You'll need an @keyframes block to change the background image's position! */
+
+@keyframes fighting {
+  0% {background-position: 0 0;}
+  100% {  background-position: -280px 0;}
+}
+
+@keyframes fighting2 {
+  0% {background-position: 0 -640px;}
+  100% {background-position: -490px -640px;}
+}
+
+
+
+
+/*body {
+    background-image: url("el_avila_desde_parque_del_este1000.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}*/
+
+.Hauduken:hover {
+  background: url(https://davidwalsh.name/demo/ken.png) 0 0 no-repeat;
+  animation: fighting3 1s steps(5) infinite 1s;
+}
+
+@keyframes fighting3 {
+  0% {background-position: 0 -560px;}
+  100% {background-position: -350px -560px;}
+}
